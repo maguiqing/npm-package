@@ -6,3 +6,4 @@
 
 -   加入 changelog ([09cb30f](https://github.com/maguiqing/npm-package/commit/09cb30f))
 -   加入 commit 检查 ([3e04dab](https://github.com/maguiqing/npm-package/commit/3e04dab))
+-   引入组件 ([d9ab1c1](https://github.com/maguiqing/npm-package/commit/d9ab1c1))

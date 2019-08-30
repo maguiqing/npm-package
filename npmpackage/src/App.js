@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/main.css';
 import PropTypes from 'prop-types';
+import c from 'classnames';
 
 export default class CollapseView extends Component {
     static propTypes = {
@@ -27,19 +28,19 @@ export default class CollapseView extends Component {
 
     render() {
         const { local, props } = this;
-        console.log(1123);
-        // const header = c('collapse-header');
-        // const content = c('collapse-content', this.state.collapse && 'collapse-true');
-        // const img = c('collapse-img', this.state.collapse && 'rotate-img');
+        // console.log(1123);
+        const header = c('collapse-header');
+        const content = c('collapse-content', this.state.collapse && 'collapse-true');
+        const img = c('collapse-img', this.state.collapse && 'rotate-img');
 
         // return <div>111</div>
         return (
             <div className="collapse-wrapper">
-                <div className="collapse-header">
+                <div className={header} onClick={this.handleClick.bind(this)}>
                     {props.header}
-                    <img src="./image/collapse.svg" />
+                    <img className={img} src={require('./image/collapse.svg')} />
                 </div>
-                <div className="collapse-content">{props.content}</div>
+                <div className={content}>{props.content}</div>
             </div>
         );
         // h.div('collapse-wrapper', {},

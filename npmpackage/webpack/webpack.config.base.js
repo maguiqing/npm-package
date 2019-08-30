@@ -68,8 +68,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-                use: ['file-loader']
+                test: /\.svg/,
+                use: [
+                    {
+                        loader: 'svg-sprite-loader',
+                        options: {}
+                    },
+                    {
+                        loader: 'url-loader',
+                        options: {}
+                    }
+                ]
             }
         ]
     }
