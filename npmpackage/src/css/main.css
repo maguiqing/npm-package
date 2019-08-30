@@ -1,0 +1,35 @@
+#main {
+    .collapse-wrapper {
+        border-radius: 3px;
+        border: 1px solid #eeeeee;
+
+        .collapse-header {
+            position: relative;
+            line-height: 18px;
+            padding: 17px 43px 17px 30px;
+            cursor: pointer;
+
+            .collapse-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all 0.2s ease-in;
+                transform-origin: 50% 20%;
+                left: 16px;
+                width: 10px;
+                height: 6.8px;
+            }
+
+            .rotate-img {
+                transform: rotate(180deg);
+            }
+        }
+        .collapse-content {
+            border-top: 1px solid #eeeeee;
+        }
+
+        .collapse-true {
+            display: none;
+        }
+    }
+}

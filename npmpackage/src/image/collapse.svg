@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>单个收起</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="合同管理" transform="translate(-252.000000, -317.000000)" fill="#666666">
+            <g id="Group-1" transform="translate(216.000000, 148.000000)">
+                <g id="01" transform="translate(16.000000, 150.000000)">
+                    <path d="M26.4330469,19.1882768 C26.6771094,18.9372411 27.0727344,18.9372411 27.3167969,19.1882768 C27.5608594,19.4393125 27.5608594,19.8462411 27.3167969,20.0972768 L24.1917969,23.3115625 C23.9477344,23.5625982 23.5521094,23.5625982 23.3080469,23.3115625 L20.1830469,20.0972768 C19.9389844,19.8462411 19.9389844,19.4393125 20.1830469,19.1882768 C20.4271094,18.9372411 20.8227344,18.9372411 21.0667969,19.1882768 L23.7499219,21.9480625 L26.4330469,19.1882768 Z" id="单个收起" transform="translate(23.749922, 21.249920) scale(1, -1) translate(-23.749922, -21.249920) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 module.exports = {
@@ -25,36 +25,38 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader'
                 }
             },
             {
                 test: /\.less$/,
                 use: [
                     // 'style-loader',
-                    NODE_ENV==="production" ? MiniCssExtractPlugin.loader : "style-loader",
+                    NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
                     'postcss-loader',
-                    'less-loader',
+                    'less-loader'
                 ]
             },
             {
                 test: /\.css$/,
                 use: [
                     // 'style-loader',
-                    NODE_ENV==="production" ? MiniCssExtractPlugin.loader : "style-loader",
+                    NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
                     'postcss-loader'
                 ]
             },
             {
                 test: /\.html$/,
-                use: [{
-                    loader: "html-loader",
-                    options: {
-                        minimize: true
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            minimize: true
+                        }
                     }
-                }]
+                ]
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -64,7 +66,11 @@ module.exports = {
                         options: {}
                     }
                 ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                use: ['file-loader']
             }
         ]
     }
-}
+};
