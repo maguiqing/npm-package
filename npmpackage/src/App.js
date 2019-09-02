@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/main.css';
+import './css/main.less';
 import PropTypes from 'prop-types';
 import c from 'classnames';
 

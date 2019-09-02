@@ -70,10 +70,10 @@ module.exports = {
             {
                 test: /\.svg/,
                 use: [
-                    {
-                        loader: 'svg-sprite-loader',
-                        options: {}
-                    },
+                    // {
+                    //     loader: 'svg-sprite-loader',
+                    //     options: {}
+                    // },
                     {
                         loader: 'url-loader',
                         options: {}

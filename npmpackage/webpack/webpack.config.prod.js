@@ -14,7 +14,7 @@ module.exports = merge(common, {
     plugins: [
         new MiniCssExtractPlugin({
             //提取css
-            filename: './css/main.css'
+            filename: './css/main.less'
         })
         // new UglifyJsPlugin({
         //     sourceMap: true
