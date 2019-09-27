@@ -71,7 +71,6 @@
         "webpack-merge": "^4.2.1"
     },
     "dependencies": {
-        "echarts": "^4.2.1",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "uglifyjs-webpack-plugin": "^2.2.0",
         "webpack-bundle-analyzer": "^3.4.1"

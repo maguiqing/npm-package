@@ -1,0 +1,3 @@
+config # webpack配置
+src # 组件源代码目录
+.babelrc # babel 配置

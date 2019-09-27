@@ -238,7 +238,7 @@
                 );
             })();
             (g.propTypes = { head: c.a.oneOfType([c.a.node, c.a.string]), content: c.a.node }),
-                (g.defaultProps = { header: '头部111', content: '内容' });
+                (g.defaultProps = { header: '头部', content: '内容' });
         },
         function(e, t, r) {
             'use strict';
