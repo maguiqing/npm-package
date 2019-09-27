@@ -20,7 +20,8 @@ export default class CollapseView extends Component {
     // 注入全局的 app 对象, 通过 props.app 可访问
     // static shouldInjectApp = true;
 
-    handleClick() {
+    handleClick(e) {
+        // e.preventDefault();
         this.setState({
             collapse: !this.state.collapse
         });
@@ -28,12 +29,13 @@ export default class CollapseView extends Component {
 
     render() {
         const { local, props } = this;
+        const { className } = props;
         const header = c('collapse-header');
         const content = c('collapse-content', this.state.collapse && 'collapse-true');
         const img = c('collapse-img', this.state.collapse && 'rotate-img');
 
         return (
-            <div className="collapse-wrapper">
+            <div className={c('collapse-wrapper', className)}>
                 <div className={header} onClick={this.handleClick.bind(this)}>
                     {props.header}
                     <img className={img} src={require('./image/collapse.svg')} />
