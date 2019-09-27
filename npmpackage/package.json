@@ -1,12 +1,13 @@
 {
-    "name": "npmpackage",
+    "name": "collapse-demo",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "A test component demo",
+    "main": "lib/index.js",
     "scripts": {
         "dev": "webpack-dev-server --hot --config ./webpack/webpack.config.dev.js",
         "dest": "webpack  --config ./webpack/webpack.config.dev.js",
         "build": "webpack --progress --hide-modules --config ./webpack/webpack.config.prod.js",
+        "pub": "npm run build && npm publish",
         "version": "npm run changelog",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
     },
@@ -21,8 +22,12 @@
             "@commitlint/config-conventional"
         ]
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "react",
+        "hello world",
+        "collapse"
+    ],
+    "author": "maguiqing",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.5.5",

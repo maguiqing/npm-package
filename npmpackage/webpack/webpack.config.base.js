@@ -3,12 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 module.exports = {
-    entry: './src/main.js', // 项目的入口文件，webpack会从main.js开始，把所有依赖的js都加载打包
-    output: {
-        path: path.resolve(__dirname, '../dist'), // 项目的打包文件路径
-        // publicPath: '/dist/', // 通过devServer访问路径
-        filename: 'build.js' // 打包后的文件名
-    },
     plugins: [
         new HtmlWebpackPlugin({
             // 用于生成的HTML文档的标题
@@ -27,25 +21,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            },
-            {
-                test: /\.less$/,
-                use: [
-                    // 'style-loader',
-                    NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'less-loader'
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    // 'style-loader',
-                    NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
-                    'css-loader',
-                    'postcss-loader'
-                ]
             },
             {
                 test: /\.html$/,
@@ -70,15 +45,16 @@ module.exports = {
             {
                 test: /\.svg/,
                 use: [
-                    // {
-                    //     loader: 'svg-sprite-loader',
-                    //     options: {}
-                    // },
                     {
                         loader: 'url-loader',
                         options: {}
                     }
                 ]
+            },
+            {
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
             }
         ]
     }

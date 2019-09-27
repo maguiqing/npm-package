@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import echarts from './echarts.js';
-import App from './App.js';
+import App from './collapse';
 ReactDOM.render(<App />, document.getElementById('main'));

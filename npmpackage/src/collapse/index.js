@@ -28,12 +28,10 @@ export default class CollapseView extends Component {
 
     render() {
         const { local, props } = this;
-        // console.log(1123);
         const header = c('collapse-header');
         const content = c('collapse-content', this.state.collapse && 'collapse-true');
         const img = c('collapse-img', this.state.collapse && 'rotate-img');
 
-        // return <div>111</div>
         return (
             <div className="collapse-wrapper">
                 <div className={header} onClick={this.handleClick.bind(this)}>
@@ -43,14 +41,19 @@ export default class CollapseView extends Component {
                 <div className={content}>{props.content}</div>
             </div>
         );
-        // h.div('collapse-wrapper', {},
-        //     h.div(header, {
-        //             onClick: () => this.handleClick()
-        //         },
-        //         props.header,
-        //         h.img(img, {src: require('./image/collapse.svg')})
-        //     ),
-        //     h.div(content, {}, props.content),
-        // );
+    }
+
+    componentDidMount() {
+        // var a = {a: 1};
+        // function fun1 (a) {
+        //     return a
+        // }
+        // function fun2 (a) {
+        //     var a = {a: 1}
+        //     return a
+        // }
+        // let c = e = fun1(a);
+        // let d = f = fun2();
+        // console.log(a === c);
     }
 }
